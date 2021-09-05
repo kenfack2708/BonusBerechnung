@@ -58,7 +58,7 @@ public class HelloServlet extends HttpServlet {
 		double bonus = berechneBonus(Firmenzugehoerigkeit,AktuellesGehalt);
 		
 		PrintWriter writer = response.getWriter();
-		writer.println("<h1>Hi " + NameMitarbeiter + " dein Bonus beträgt" + bonus +" Euro</h1>");
+		writer.println("<h1>Hi " + NameMitarbeiter + " dein Bonus beträgt " + bonus +" Euro</h1>");
 		
 		
 		writer.close();
