@@ -55,11 +55,10 @@ public class HelloServlet extends HttpServlet {
 		String Firmenzugehoerigkeit = request.getParameter("Jahr");
 		String AktuellesGehalt = request.getParameter("Gehalt");
 		
-
 		double bonus = berechneBonus(Firmenzugehoerigkeit,AktuellesGehalt);
 		
 		PrintWriter writer = response.getWriter();
-		writer.println("<h1>Hi " + NameMitarbeiter + " dein Bonus beträgt steph " + bonus +" Euro</h1>");
+		writer.println("<h1>Hi " + NameMitarbeiter + " dein Bonus beträgt " + bonus +" Euro</h1>");
 		
 		
 		writer.close();
