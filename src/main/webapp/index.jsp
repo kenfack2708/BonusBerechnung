@@ -9,7 +9,7 @@
 <body>
 <body>
 	<h1>Bonusberechnung</h1>
-	<form action="helloServlet" method="post">
+	<form action="bonusServlet" method="post">
 <div class="form_content clearfix">
 		<div class="form-group">
 			<label for="Vorname">Vorname</label>
