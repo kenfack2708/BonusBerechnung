@@ -15,14 +15,14 @@ public class Bonusrechner {
         }else if (Double.parseDouble(Firmenzugehoerigkeit)<=15){
        	 return 0.25;
         }else if (Double.parseDouble(Firmenzugehoerigkeit)<=20){
-       	 return 0.30;
+       	 return 0.32;
         }else return 0.35;
    }
    
-   public double berechneBonus(String Firmenzugehoerigkeit, String AktuellesGehalt) {
+   public double berechneBonus(double BonusProzentsatz, String AktuellesGehalt) {
    	
-   	double bonus = Double.parseDouble(AktuellesGehalt)*berechneBonusProzentsatz(Firmenzugehoerigkeit);
-   	
+   	double bonus = Double.parseDouble(AktuellesGehalt)*BonusProzentsatz;
+   			
    	return bonus;
   }
 

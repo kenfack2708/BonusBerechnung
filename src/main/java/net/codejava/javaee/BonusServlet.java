@@ -16,14 +16,14 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/bonusServlet")
 public class BonusServlet extends HttpServlet {
 	private static final long serialVersionUID = 102831973239L;
-	public Bonusrechner rechner;
+	public Bonusrechner Rechner;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
     public BonusServlet() {
         super();
-        rechner = new Bonusrechner();
+        Rechner = new Bonusrechner();
     }
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -33,11 +33,11 @@ public class BonusServlet extends HttpServlet {
 		String Firmenzugehoerigkeit = request.getParameter("Jahr");
 		String AktuellesGehalt = request.getParameter("Gehalt");
 		
-		double bonus = rechner.berechneBonus(Firmenzugehoerigkeit,AktuellesGehalt);
+		double bonusProzenzsatz = Rechner.berechneBonusProzentsatz(Firmenzugehoerigkeit);
+		double bonus = Rechner.berechneBonus(bonusProzenzsatz,AktuellesGehalt);
 	
 		PrintWriter writer = response.getWriter();
 		writer.println("<h1>Hi " + NameMitarbeiter + " dein Bonus beträgt " + bonus +" Euro</h1>");
-		
 		
 		writer.close();
 		// TODO Auto-generated method stub
