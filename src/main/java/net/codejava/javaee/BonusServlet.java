@@ -34,6 +34,7 @@ public class BonusServlet extends HttpServlet {
 		String AktuellesGehalt = request.getParameter("Gehalt");
 		
 		double bonusProzenzsatz = Rechner.berechneBonusProzentsatz(Firmenzugehoerigkeit);
+		
 		double bonus = Rechner.berechneBonus(bonusProzenzsatz,AktuellesGehalt);
 	
 		PrintWriter writer = response.getWriter();
