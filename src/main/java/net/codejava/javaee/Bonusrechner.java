@@ -15,7 +15,7 @@ public class Bonusrechner {
         }else if (Double.parseDouble(Firmenzugehoerigkeit)<=15){
        	 return 0.25;
         }else if (Double.parseDouble(Firmenzugehoerigkeit)<=20){
-       	 return 0.33;
+       	 return 0.32;
         }else return 0.35;
    }
    
