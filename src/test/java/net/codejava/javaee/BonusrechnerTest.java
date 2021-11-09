@@ -23,7 +23,7 @@ public class BonusrechnerTest {
 	public void testBerechneBonusProzentsatz16() {
 		Bonusrechner rechner = new Bonusrechner();
 		double Prozentsatz = rechner.berechneBonusProzentsatz("16");
-		assertEquals(Double.toString(0.32), Double.toString(Prozentsatz));
+		assertEquals(Double.toString(0.31), Double.toString(Prozentsatz));
 	}
 	@Test
 	public void testBerechneBonus() {
