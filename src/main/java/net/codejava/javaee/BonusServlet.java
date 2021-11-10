@@ -32,7 +32,7 @@ public class BonusServlet extends HttpServlet {
 		String NameMitarbeiter = request.getParameter("yourName");
 		String Firmenzugehoerigkeit = request.getParameter("Jahr");
 		String AktuellesGehalt = request.getParameter("Gehalt");
-		String Test = " ";
+		String Test = "";
 		
 		double bonusProzenzsatz = Rechner.berechneBonusProzentsatz(Firmenzugehoerigkeit);
 		
